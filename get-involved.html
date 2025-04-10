@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved - Mackenzie Foundation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/get-involved.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <section class="hero-section text-white text-center py-5">
+    <div class="container">
+      <h1>Join Our Mission</h1>
+      <p>Together, we can create a brighter future through volunteering, partnerships, and fundraising.</p>
+    </div>
+  </section>
+
+  <div class="container-fluid mt-5">
+    <div class="row">
+
+      <!-- Main Content -->
+      <div class="col-md-8">
+        <!-- Volunteering Section -->
+        <div class="volunteering-section p-4 rounded mb-4" id="volunteer">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="images/volunteer.jpg" class="img-fluid rounded shadow-sm hover-zoom" alt="Volunteering">
+            </div>
+            <div class="col-md-6">
+              <h2><i class="bi bi-people-fill text-primary me-2"></i> Volunteer With Us</h2>
+              <p>Help us support children by offering your time and skills. Our volunteers play a vital role in education, care, and mentorship.</p>
+              <a href="#registerForm" class="btn btn-outline-primary">Sign Up to Volunteer</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partnership Section -->
+        <div class="partnership-section p-4 rounded mb-4">
+          <div class="row align-items-center">
+            <div class="col-md-6 order-md-2">
+              <img src="images/partner.jpg" class="img-fluid rounded shadow-sm hover-zoom" alt="Partnership">
+            </div>
+            <div class="col-md-6 order-md-1">
+              <h2><i class="bi bi-handshake-fill text-success me-2"></i> Become a Partner</h2>
+              <p>Collaborate with us to create long-term sustainable impact. Corporate and community partners help us scale our reach and services.</p>
+              <a href="#registerForm" class="btn btn-outline-success">Become a Partner</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-md-4">
+        <div class="sidebar p-4 rounded shadow-sm">
+          <h4>Get Started</h4>
+          <p><i class="bi bi-person-plus-fill text-primary me-2"></i> Want to join our community? <span class="text-primary" id="showRegister" role="button">Create an account</span></p>
+          <p><i class="bi bi-box-arrow-in-right text-primary me-2"></i> Already have an account? <span class="text-primary" id="showLogin" role="button">Login</span></p>
+
+          <!-- Registration Form -->
+          <div id="registerForm" class="form-section d-none">
+            <h5 class="mt-3">Register</h5>
+            <form>
+              <input type="text" class="form-control mb-2" placeholder="Full Name" required>
+              <input type="email" class="form-control mb-2" placeholder="Email" required>
+              <input type="password" class="form-control mb-2" placeholder="Password" required>
+              <select class="form-select mb-2">
+                <option selected>Select Role</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="partner">Partner</option>
+              </select>
+              <button class="btn btn-success w-100">Sign Up</button>
+            </form>
+          </div>
+
+          <!-- Login Form -->
+          <div id="loginForm" class="form-section d-none">
+            <h5 class="mt-3">Login</h5>
+            <form>
+              <input type="email" class="form-control mb-2" placeholder="Email" required>
+              <input type="password" class="form-control mb-2" placeholder="Password" required>
+              <a href="#" class="text-decoration-none d-block mb-2 text-end text-muted small" id="showForgot">Forgot Password?</a>
+              <button class="btn btn-primary w-100">Login</button>
+            </form>
+          </div>
+
+          <!-- Forgot Password -->
+          <div id="forgotForm" class="form-section d-none">
+            <h5 class="mt-3">Reset Password</h5>
+            <form>
+              <input type="email" class="form-control mb-2" placeholder="Enter your email">
+              <button class="btn btn-warning w-100">Reset</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/get-involved.js"></script>
+  <script src="js/include.js"></script>
+</body>
+</html>
