@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Mackenzie Foundation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/donations.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- HERO SECTION -->
+    <section class="donation-hero text-center py-5">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/children.webp" class="d-block w-100" alt="Children playing">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/education-2J3H9W6.jpg" class="d-block w-100" alt="Education support">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/communityhelp.jpg" class="d-block w-100" alt="Community help">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="display-4 fw-bold mb-4" data-aos="fade-up" text-dark >Make a Difference Today</h1>
+                <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200" text-dark>Your support helps us provide shelter, education, and hope to orphaned children in Uganda</p>
+                <button class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Donate Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATION OPTIONS -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- One-Time Donation -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-heart-fill text-danger fs-1 mb-3"></i>
+                            <h3 class="card-title">One-Time Donation</h3>
+                            <p class="card-text">Make an immediate impact with a single donation</p>
+                            <div class="donation-amounts mb-3">
+                                <button class="btn btn-outline-primary m-1">$10</button>
+                                <button class="btn btn-outline-primary m-1">$25</button>
+                                <button class="btn btn-outline-primary m-1">$50</button>
+                                <button class="btn btn-outline-primary m-1">$100</button>
+                            </div>
+                            <button class="btn btn-primary">Donate Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Sponsorship -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-calendar-heart text-success fs-1 mb-3"></i>
+                            <h3 class="card-title">Monthly Sponsorship</h3>
+                            <p class="card-text">Provide consistent support through monthly donations</p>
+                            <div class="donation-amounts mb-3">
+                                <button class="btn btn-outline-success m-1">$30/mo</button>
+                                <button class="btn btn-outline-success m-1">$50/mo</button>
+                                <button class="btn btn-outline-success m-1">$100/mo</button>
+                            </div>
+                            <button class="btn btn-success">Become a Sponsor</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material Donations -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-gift-fill text-warning fs-1 mb-3"></i>
+                            <h3 class="card-title">Material Donations</h3>
+                            <p class="card-text">Donate supplies, clothes, or other needed items</p>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="bi bi-check2 text-success"></i> School Supplies</li>
+                                <li><i class="bi bi-check2 text-success"></i> Clothes & Shoes</li>
+                                <li><i class="bi bi-check2 text-success"></i> Books & Toys</li>
+                                <li><i class="bi bi-check2 text-success"></i> Medical Supplies</li>
+                            </ul>
+                            <button class="btn btn-warning text-dark">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT SECTION -->
+    <section class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="mb-4" data-aos="fade-up">Your Donation Makes an Impact</h2>
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="impact-card">
+                        <i class="bi bi-book fs-1 text-primary"></i>
+                        <h4>$30</h4>
+                        <p>Provides school supplies for one child</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="impact-card">
+                        <i class="bi bi-house-heart fs-1 text-success"></i>
+                        <h4>$100</h4>
+                        <p>Provides shelter for one month</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="impact-card">
+                        <i class="bi bi-heart-pulse fs-1 text-danger"></i>
+                        <h4>$50</h4>
+                        <p>Provides medical care</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="impact-card">
+                        <i class="bi bi-cake2 fs-1 text-warning"></i>
+                        <h4>$25</h4>
+                        <p>Provides meals for one week</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="../js/include.js"></script>
+</body>
+</html>
