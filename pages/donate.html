@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now - Mackenzie Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/donate-now.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8" data-aos="fade-up">
+                <div class="card shadow-lg">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4">Make Your Donation</h2>
+                        
+                        <!-- Donation Amount Selection -->
+                        <div class="mb-4">
+                            <h5>Select Amount</h5>
+                            <div class="amount-buttons d-flex flex-wrap gap-2 mb-3">
+                                <button class="btn btn-outline-primary amount-btn" data-amount="50000">UGX 50,000</button>
+                                <button class="btn btn-outline-primary amount-btn" data-amount="100000">UGX 100,000</button>
+                                <button class="btn btn-outline-primary amount-btn" data-amount="200000">UGX 200,000</button>
+                                <button class="btn btn-outline-primary amount-btn" data-amount="500000">UGX 500,000</button>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text">UGX</span>
+                                <input type="number" class="form-control" id="customAmount" placeholder="Custom Amount">
+                            </div>
+                        </div>
+
+                        <!-- Donation Frequency -->
+                        <div class="mb-4">
+                            <h5>Donation Frequency</h5>
+                            <div class="btn-group w-100">
+                                <input type="radio" class="btn-check" name="frequency" id="oneTime" checked>
+                                <label class="btn btn-outline-primary" for="oneTime">One-time</label>
+
+                                <input type="radio" class="btn-check" name="frequency" id="monthly">
+                                <label class="btn btn-outline-primary" for="monthly">Monthly</label>
+
+                                <input type="radio" class="btn-check" name="frequency" id="yearly">
+                                <label class="btn btn-outline-primary" for="yearly">Yearly</label>
+                            </div>
+                        </div>
+
+                        <!-- Payment Information -->
+                        <form id="paymentForm" class="needs-validation" novalidate>
+                            <h5 class="mb-3">Personal Information</h5>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <h5 class="mb-3">Payment Method</h5>
+                            <div class="payment-methods mb-4">
+                                <!-- Mobile Money -->
+                                <div class="d-flex justify-content-between align-items-center border rounded p-3 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="mtn" checked>
+                                        <label class="form-check-label" for="mtn">
+                                            MTN Mobile Money
+                                        </label>
+                                    </div>
+                                    <img src="../images/mtn-momo.png" alt="MTN MoMo" height="30">
+                                </div>
+
+                                <!-- Airtel Money -->
+                                <div class="d-flex justify-content-between align-items-center border rounded p-3 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="airtel">
+                                        <label class="form-check-label" for="airtel">
+                                            Airtel Money
+                                        </label>
+                                    </div>
+                                    <img src="../images/airtel-money.png" alt="Airtel Money" height="30">
+                                </div>
+                                
+                                <!-- Bank Transfer -->
+                                <div class="d-flex justify-content-between align-items-center border rounded p-3 mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="bank">
+                                        <label class="form-check-label" for="bank">
+                                            Bank Transfer
+                                        </label>
+                                    </div>
+                                    <i class="bi bi-bank fs-4"></i>
+                                </div>
+
+                                <!-- Card Payment -->
+                                <div class="d-flex justify-content-between align-items-center border rounded p-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="card">
+                                        <label class="form-check-label" for="card">
+                                            Credit/Debit Card
+                                        </label>
+                                    </div>
+                                    <div class="payment-icons">
+                                        <i class="bi bi-credit-card fs-4 me-2"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Money Details -->
+                            <div id="mobileMoneyDetails" class="payment-details">
+                                <div class="row g-3 mb-4">
+                                    <div class="col-12">
+                                        <label class="form-label">Mobile Money Number</label>
+                                        <input type="tel" class="form-control" placeholder="256XXXXXXXXX" required>
+                                        <small class="text-muted">Enter your mobile money number starting with 256</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bank Details -->
+                            <div id="bankDetails" class="payment-details d-none">
+                                <div class="alert alert-info">
+                                    <h6>Bank Account Details:</h6>
+                                    <p class="mb-1">Bank: Stanbic Bank Uganda</p>
+                                    <p class="mb-1">Account Name: Mackenzie Foundation</p>
+                                    <p class="mb-1">Account Number: XXXX-XXXX-XXXX</p>
+                                    <p class="mb-0">Branch: Kampala Main Branch</p>
+                                </div>
+                            </div>
+
+                            <!-- Card Details (shown/hidden based on selection) -->
+                            <div id="cardDetails">
+                                <div class="row g-3 mb-4">
+                                    <div class="col-12">
+                                        <label class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Expiry Date</label>
+                                        <input type="text" class="form-control" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">CVV</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Complete Donation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/donate-now.js"></script>
+</body>
+</html>

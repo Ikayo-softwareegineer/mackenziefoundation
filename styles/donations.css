@@ -1,8 +1,4 @@
 .donation-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('../images/donation-hero.jpg') center/cover no-repeat;
-    color: white;
-    padding: 100px 0;
     position: relative;
     height: 600px;
     overflow: hidden;
@@ -60,6 +56,17 @@
 
 .carousel-item {
     transition: transform 2s ease-in-out;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-inner {
+    max-height: 500px;
+    overflow: hidden;
 }
 
 /* Responsive adjustments */
